@@ -120,5 +120,5 @@ STATICFILES_DIRS = (os.path.join(MAIN_DIR, 'static'),)
 STATIC_ROOT = 'staticfiles'
 
 LOGIN_URL = '/user/login'
-LOGIN_REDIRECT = '/'
+LOGIN_REDIRECT = '/question/'
 SITE_ID = 1
