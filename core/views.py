@@ -21,6 +21,7 @@ class QuestionCreateView(CreateView):
 class QuestionListView(ListView):
     model = Question
     template_name = "question/question_list.html"
+    paginate_by = 5
 
 class QuestionDetailView(DetailView):
     model = Question
@@ -184,3 +185,4 @@ class SearchQuestionListView(QuestionListView):
     def get_queryset(self):
         incoming_query_string = self.request.GET.get('query','')
         return Question.objects.filter(title__icontains=incoming_query_string)
+
